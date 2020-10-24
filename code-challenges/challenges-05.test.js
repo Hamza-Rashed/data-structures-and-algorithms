@@ -29,25 +29,46 @@ let starWarsPeople = [
 let $ = createSnippetWithJQuery(`
 <main>
   <section id="template">
-
+    <h2></h2>
+    <h3></h3>
+    <p></p>
   </section>
 </main>
 `);
 
 const templateWithJQuery = () => {
-  let petClone = $('#template').clone();
-  $('main').append(petClone);
-for(let i=0 ; i<starWarsPeople.length ; i++) {
-    petClone.html(
-    `
-          <h2>${starWarsPeople[0].name}</h2>
-          <h3>${starWarsPeople[1].height}</h3>
-          <p>${starWarsPeople[2].eye_color}</p>
-    `
-      )
-}
+  starWarsPeople.forEach(element => {
+    let allEle = $('#template').clone();
+    allEle.removeAttr('id');
+    allEle.find('h2').text(element.name);
+    allEle.find('h3').text(element.height);
+    allEle.find('p').text(element.eye_color);
+    $('main').append(allEle)
+  });
+};
 
-}
+// let $ = createSnippetWithJQuery(`
+// <main>
+//   <section id="template">
+
+//   </section>
+// </main>
+// `);
+
+// const templateWithJQuery = () => {
+//   let petClone = $('#template').clone();
+//   $('main').append(petClone);
+// for(let i=0 ; i<starWarsPeople.length ; i++) {
+//     petClone.html(
+//     `
+//           <h2>${starWarsPeople[0].name}</h2>
+//           <h3>${starWarsPeople[1].height}</h3>
+//           <p>${starWarsPeople[2].eye_color}</p>
+//     `
+//       )
+// }
+
+// }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -253,8 +274,8 @@ describe('Testing challenge 1', () => {
   test('It should append the star wars people to the DOM', () => {
     templateWithJQuery();
     expect($('section:nth-child(2) h2').text()).toStrictEqual('Luke Skywalker');
-    // expect($('section:nth-child(3) h3').text()).toStrictEqual('167');
-    // expect($('section:nth-child(4) p').text()).toStrictEqual('red');
+    expect($('section:nth-child(3) h3').text()).toStrictEqual('167');
+    expect($('section:nth-child(4) p').text()).toStrictEqual('red');
   })
 });
 
