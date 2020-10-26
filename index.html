@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+let arr = [
+  {name: 'Sweatshirt', price: 45},
+  {name: 'Bookmark', price: 2.50},
+  {name: 'Tote bag', price: 15}
+];
+const sortByPrice = (arr) => {
+
+arr.sort((a,b)=>{
+    console.log(a.price - b.price)
+})
+
+};
+sortByPrice(arr)
+    </script>
+</body>
+</html>

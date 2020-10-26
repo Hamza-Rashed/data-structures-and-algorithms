@@ -71,9 +71,14 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
-};
 
+    let convert = [];
+    arr.forEach(element=>{
+        convert.push(element.toLocaleLowerCase());
+        convert.sort();
+    })
+return convert;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
@@ -88,7 +93,9 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.forEach(element=>{
+    
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
