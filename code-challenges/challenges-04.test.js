@@ -40,11 +40,18 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  if(input.match(/\d/g)){
-    return true
-  }else{
-    return false
+  var IfNumbers = /[0-9]/;
+  var IfSpaces = /\w/g;
+  if(!IfSpaces.test(input)){
+    return false;
   }
+  if(!isNaN(input)){
+return true;
+  }
+      if(IfNumbers.test(input)){
+          return true;
+      }
+return false;
   
 };
 
