@@ -40,11 +40,18 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  if(input.match(/\d/g)){
-    return true
-  }else{
-    return false
+  var IfNumbers = /[0-9]/;
+  var IfSpaces = /\w/g;
+  if(!IfSpaces.test(input)){
+    return false;
   }
+  if(!isNaN(input)){
+return true;
+  }
+      if(IfNumbers.test(input)){
+          return true;
+      }
+return false;
   
 };
 
@@ -61,7 +68,7 @@ const isCapitalized = (str) => {
     var result = /\b[A-Z].*?\b/g;
     if(str.match(result)){
       resultAll = str.match(result);
-  
+    }
     return resultAll;
 };
 
@@ -98,7 +105,7 @@ Do not use the vertical bar (pipe) in your pattern.
 const matchMonth = (input) => {
   // Solution code here...
 };
-}
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
