@@ -68,7 +68,7 @@ const isCapitalized = (str) => {
     var result = /\b[A-Z].*?\b/g;
     if(str.match(result)){
       resultAll = str.match(result);
-  
+    }
     return resultAll;
 };
 
@@ -105,7 +105,7 @@ Do not use the vertical bar (pipe) in your pattern.
 const matchMonth = (input) => {
   // Solution code here...
 };
-}
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
