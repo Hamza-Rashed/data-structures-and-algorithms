@@ -172,6 +172,7 @@ const mapCurrentEvents = () => {
   return result;
 }
 
+
 function Event(obj) {
   this.author = obj.author;
   this.categories = obj.category;
