@@ -172,6 +172,7 @@ const mapCurrentEvents = () => {
   return result;
 }
 
+
 function Event(obj) {
   this.author = obj.author;
   this.categories = obj.category;
@@ -179,7 +180,6 @@ function Event(obj) {
   this.img_url = obj.image;
   this.data = obj.published;
   this.title = obj.title;}
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
